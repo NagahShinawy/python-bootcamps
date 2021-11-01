@@ -33,3 +33,12 @@ def month_quarter(month: int):
 
 
 print(month_quarter(9))
+
+numbers = range(0, 31, 3)
+by_5 = range(0, 101, 5)
+
+print(list(numbers))  # [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
+
+print(
+    list(by_5)
+)  # [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100]
