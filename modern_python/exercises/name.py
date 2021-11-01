@@ -1,7 +1,4 @@
-
-
 class Name:
-
     def __init__(self, fname, lname):
         self.fname = fname
         self.lname = lname
@@ -11,7 +8,7 @@ class Name:
 
     def __str__(self):
         return self.to_fullname()
-    
+
     def __len__(self):
         return len(self.to_fullname())
 
