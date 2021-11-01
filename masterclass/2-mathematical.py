@@ -27,12 +27,12 @@ class Counter:
 
     RESET_VALUE = 0
 
-    def __init__(self, value=0):
-        self.value = value
+    def __init__(self, val=0):
+        self.val = val
 
     @property
     def is_even(self) -> bool:
-        return self.value % 2 == 0
+        return self.val % 2 == 0
 
     @property
     def is_odd(self) -> bool:
@@ -40,11 +40,11 @@ class Counter:
 
     @property
     def next(self) -> int:
-        return self.value + 1
+        return self.val + 1
 
     @property
     def prev(self) -> int:
-        return self.RESET_VALUE if self.value < 1 else self.value - 1
+        return self.RESET_VALUE if self.val < 1 else self.val - 1
 
     @property
     def next_3(self) -> list:
@@ -52,11 +52,21 @@ class Counter:
 
     @property
     def reset(self) -> int:
-        self.value = self.RESET_VALUE
-        return self.value
+        self.val = self.RESET_VALUE
+        return self.val
+
+    def __setattr__(self, key, value):
+        if key == "val":
+            if not isinstance(value, (int, float)):
+                raise TypeError(
+                    f"number must be valid int, float given '{value.__class__.__name__}'"
+                )
+            if value < 0:
+                raise ValueError(f"number must be positive value give '{value}'")
+        return super().__setattr__(key, value)
 
 
-counter = Counter(value=20)
+counter = Counter(val=20)
 
 print(counter.is_odd)
 print(counter.is_even)
@@ -66,3 +76,6 @@ print(counter.prev)
 
 print(counter.next_3)
 print(counter.reset)
+
+
+c = Counter(val=-1)
