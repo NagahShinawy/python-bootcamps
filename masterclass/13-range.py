@@ -16,17 +16,29 @@ QUARTER4 = "Q4"
 
 QUARTERS = [QUARTER1, QUARTER2, QUARTER3, QUARTER4]
 
+START_Q1 = 1
+END_Q1 = 3
+
+START_Q2 = 4
+END_Q2 = 6
+
+START_Q3 = 7
+END_Q3 = 9
+
+START_Q4 = 10
+END_Q4 = 12
+
 
 def month_quarter(month: int):
-    if month in range(1, 4):
+    if month in range(START_Q1, END_Q1 + 1):
         return QUARTER1
-    elif month in range(4, 7):
+    elif month in range(START_Q2, END_Q2 + 1):
         return QUARTER2
 
-    elif month in range(7, 10):
+    elif month in range(START_Q3, END_Q3 + 1):
         return QUARTER3
 
-    elif month in range(10, 13):
+    elif month in range(START_Q4, END_Q4 + 1):
         return QUARTER4
     else:
         raise ValueError("invalid month")
