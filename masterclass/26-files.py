@@ -19,3 +19,22 @@ for ln in lines:
 info.add_row(row)
 
 print(info)
+
+print("#" * 50)
+
+with open("info.txt", "r") as f:
+    ln = f.readline()
+    print(ln, type(ln))  # read just single line  ==> str
+
+
+print("#" * 50)
+
+with open("info.txt", "r") as f:
+    content = f.read()
+    print(content, type(content))  # read all content as single string  ==> str
+
+print("#" * 50)
+
+with open("info.txt", "r") as f:
+    content = f.read(6)  # how many characters you want to return
+    print(content, len(content))
