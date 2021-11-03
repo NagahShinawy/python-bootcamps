@@ -1,12 +1,10 @@
 class Point:
-
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
 
 class Road:
-
     def __init__(self, source: Point, destination: Point):
         self.source = source
         self.destination = destination

@@ -33,12 +33,9 @@ shopping_cart = [
 print(shopping_cart * 2)
 
 
-fruits = [
-    "Apple", "Orange", "Banana", "Mango"
-]
+fruits = ["Apple", "Orange", "Banana", "Mango"]
 
 print("Apple" in fruits)
 print("apple" in fruits)
 print("orange" in fruits)
 print("Orange" in fruits)
-

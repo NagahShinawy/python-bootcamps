@@ -67,15 +67,11 @@ def main():
 
     for operation in operations:
         num1, num2 = get_random_numbers()
-        opr = operation(num1, num2)
-        result += f"{opr.num1} {opr.OPERATOR} {opr.num2} {opr.EQUAL} {opr.apply()}\n"
+        opt = operation(num1, num2)
+        result += f"{opt.num1} {opt.OPERATOR} {opt.num2} {opt.EQUAL} {opt.apply()}\n"
         print(result)
         to_txt(result)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-
-
-
-

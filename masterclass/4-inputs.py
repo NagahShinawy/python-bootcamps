@@ -1,4 +1,3 @@
-
 name = input("Please enter your name : ")
 job = input("Please enter your job")
 location = input("Please enter your location")

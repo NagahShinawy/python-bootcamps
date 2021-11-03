@@ -1,4 +1,3 @@
-
 grade = int(input("Please enter your grade: "))
 
 if grade in range(0, 50):
@@ -21,7 +20,3 @@ elif grade in range(86, 101):
 
 else:
     print("Invalid Grade")
-
-
-
-

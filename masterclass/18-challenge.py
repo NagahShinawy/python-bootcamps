@@ -1,6 +1,4 @@
-food = [
-    "rice", "chicken", "meat", "pasta", "fish"
-]
+food = ["rice", "chicken", "meat", "pasta", "fish"]
 
 
 print(food[2])
