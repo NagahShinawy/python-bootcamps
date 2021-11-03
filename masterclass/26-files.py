@@ -6,14 +6,15 @@ info.field_names = COLS
 
 
 with open("info.txt") as f:
-    lines = [line.strip() for line in f.readlines()]
+    lines = [line.strip() for line in f.readlines() if line]
 
 
 row = []
 
 for ln in lines:
-    _, value = ln.split(":")
-    row.append(value)
+    if ln:
+        _, value = ln.split(":")
+        row.append(value)
 
 info.add_row(row)
 
