@@ -1,3 +1,4 @@
+# oop example: polymorphism, object oriented, abstract
 from abc import ABC, abstractmethod
 import random
 
