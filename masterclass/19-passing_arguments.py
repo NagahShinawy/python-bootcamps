@@ -65,6 +65,14 @@ class Reminder(Operation):
         return self.num1 % self.num2
 
 
+class Power(Operation):
+
+    OPERATOR = "**"
+
+    def apply(self):
+        return self.num1 ** self.num2
+
+
 class Number:
     def __init__(self, value):
         self.value = value
@@ -92,6 +100,9 @@ class Number:
     def __mod__(self, other):
         return self.value % other.value
 
+    def __pow__(self, power, modulo=None):
+        return pow(self.value, power.value)
+
     def to_int(self):
         return int(self.value)
 
@@ -109,7 +120,7 @@ def to_txt(text: str):
 
 def main():
     num1, num2 = get_random_numbers()
-    operations = [Add, Sub, Multiply, Divide, IntDiv, Reminder]
+    operations = [Add, Sub, Multiply, Divide, IntDiv, Reminder, Power]
     result = ""
 
     for operation in operations:
