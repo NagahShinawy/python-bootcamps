@@ -1,3 +1,5 @@
+# function as input for another function
+
 TEN = 10
 
 
