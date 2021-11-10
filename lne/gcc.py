@@ -1,3 +1,4 @@
+# from number to word
 def n2w(n):
     num2words = {
         1: "one",
