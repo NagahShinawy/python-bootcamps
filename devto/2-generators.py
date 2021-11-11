@@ -1,0 +1,1 @@
+# https://dev.to/jerrynsh/using-generators-in-python-the-why-the-what-and-the-when-55l
