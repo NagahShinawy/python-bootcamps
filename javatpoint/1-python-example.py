@@ -1,4 +1,9 @@
-# using **kwargs examples
+# todo #1 using **kwargs examples
+
+# todo #2 identifiers
+# refer to a name used to identify a variable, function, module, class, module or other objects.
+# There are few rules to follow while naming the Python Variable.
+
 
 def show_info(**kwargs):
     info = ""
