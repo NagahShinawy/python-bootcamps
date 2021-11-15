@@ -96,8 +96,8 @@ class Color:
 
 
 class Teddy:
-
     # class attribute
+    WHITE = 'White'
     quantity = 0
 
     def __init__(self, name, color):
@@ -110,6 +110,11 @@ class Teddy:
 
     @property
     def color(self):
+        return self.__color
+
+    @property
+    def to_white(self):
+        self.__color = self.WHITE
         return self.__color
 
 
@@ -139,6 +144,7 @@ def main():
     print(dolphin.quantity, dolphin.color)
     dolphin.change_color('sky')
     print(dolphin.color)
+    print(dolphin.to_white)
 
 
 if __name__ == "__main__":
