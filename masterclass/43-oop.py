@@ -41,36 +41,30 @@ class PhoneNumberInvalid(BaseError):
 # interface
 
 # class mixin
-class ClsMixin:
-
+class ClsMixin(ABC):
     @property
     def cls(self):
         return self.__class__.__name__
 
 
 class JsonMixin(ABC):
-
     @abstractmethod
     def to_json(self):
         pass
 
 
 class Seller(JsonMixin, ClsMixin):
-
     def __init__(self, name):
         self.name = name
 
     def to_json(self):
-        return {
-            "name": self.name
-        }
+        return {"name": self.name}
 
     def __str__(self):
         return f"{self.cls}({self.name})"
 
 
 class Product(JsonMixin, ClsMixin):
-
     def __init__(self, name: str, price: float, seller: Seller):
         self.name = name
         self.price = price
@@ -80,15 +74,10 @@ class Product(JsonMixin, ClsMixin):
         return f"{self.cls}({self.name}<{self.price}>)"
 
     def to_json(self):
-        return {
-            "name": self.name,
-            "price": self.price,
-            "seller": self.seller.to_json()
-        }
+        return {"name": self.name, "price": self.price, "seller": self.seller.to_json()}
 
 
 class Order(JsonMixin, ClsMixin):
-
     def __init__(self, products: List[Product]):
         self.products = products
 
@@ -108,6 +97,7 @@ class Color:
 
 class Teddy:
 
+    # class attribute
     quantity = 0
 
     def __init__(self, name, color):
