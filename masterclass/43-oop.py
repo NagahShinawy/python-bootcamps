@@ -101,9 +101,16 @@ class Teddy:
     quantity = 0
 
     def __init__(self, name, color):
-        self.name = name
-        self.color = color
+        self.__name = name
+        self.__color = color
         Teddy.quantity += 1
+
+    def change_color(self, color):
+        self.__color = color
+
+    @property
+    def color(self):
+        return self.__color
 
 
 def main():
@@ -130,6 +137,8 @@ def main():
     print(panda.quantity, panda.color)
     print(rabbit.quantity, rabbit.color)
     print(dolphin.quantity, dolphin.color)
+    dolphin.change_color('sky')
+    print(dolphin.color)
 
 
 if __name__ == "__main__":
