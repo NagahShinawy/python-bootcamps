@@ -5,6 +5,9 @@
 # There are few rules to follow while naming the Python Variable.
 
 
+TEN = 10
+
+
 def show_info(**kwargs):
     info = ""
     name = kwargs.get("name")
@@ -28,9 +31,24 @@ def display_info(**kwargs):
     return info
 
 
+"""
+10
+100
+1000
+"""
+
+
+def multi_ten(zeroes=4):
+    total = TEN
+    for i in range(1, zeroes + 1):
+        print(total)
+        total *= 10
+
+
 def main():
     print(show_info(address="cairo", age=12, name="John"))
     print(display_info(age=12, name="John", address="Cairo"))
+    multi_ten(3)
 
 
 if __name__ == '__main__':
