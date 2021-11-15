@@ -37,6 +37,17 @@ class PhoneNumberInvalid(BaseError):
     _message = "Enter a valid phone number"
 
 
+# abstract base class
+# interface
+
+# class mixin
+class ClsMixin:
+
+    @property
+    def cls(self):
+        return self.__class__.__name__
+
+
 class JsonMixin(ABC):
 
     @abstractmethod
@@ -44,7 +55,7 @@ class JsonMixin(ABC):
         pass
 
 
-class Seller(JsonMixin):
+class Seller(JsonMixin, ClsMixin):
 
     def __init__(self, name):
         self.name = name
@@ -55,10 +66,10 @@ class Seller(JsonMixin):
         }
 
     def __str__(self):
-        return self.name
+        return f"{self.cls}({self.name})"
 
 
-class Product(JsonMixin):
+class Product(JsonMixin, ClsMixin):
 
     def __init__(self, name: str, price: float, seller: Seller):
         self.name = name
@@ -66,7 +77,7 @@ class Product(JsonMixin):
         self.seller = seller
 
     def __str__(self):
-        return f"{self.name} - {self.price}"
+        return f"{self.cls}({self.name}<{self.price}>)"
 
     def to_json(self):
         return {
@@ -76,19 +87,33 @@ class Product(JsonMixin):
         }
 
 
-class Order(JsonMixin):
+class Order(JsonMixin, ClsMixin):
 
     def __init__(self, products: List[Product]):
         self.products = products
 
     def __str__(self):
-        return f"Order({len(self.products)})"
+        return f"{self.cls}({len(self.products)})"
 
     def __len__(self):
         return self.products
 
     def to_json(self):
         return [product.to_json() for product in self.products]
+
+
+class Color:
+    pass
+
+
+class Teddy:
+
+    quantity = 0
+
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+        Teddy.quantity += 1
 
 
 def main():
@@ -105,6 +130,16 @@ def main():
     order = Order(products=[phone, laptop, screen])
     print(order)
     print(order.to_json())
+    print(noon)
+    print(phone)
+
+    # ############# ############# ############# ############# ############# ############
+    panda = Teddy("panda", "red")
+    dolphin = Teddy("dolphin", "blue")
+    rabbit = Teddy("rabbit", "white")
+    print(panda.quantity, panda.color)
+    print(rabbit.quantity, rabbit.color)
+    print(dolphin.quantity, dolphin.color)
 
 
 if __name__ == "__main__":
