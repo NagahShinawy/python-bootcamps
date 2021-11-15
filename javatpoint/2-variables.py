@@ -84,3 +84,11 @@ print(salary)  # 1000
 print(salary)  # 1000
 raise_salary()
 print(salary)  # 1200
+
+
+# Delete a variable
+
+print(name)
+del name
+
+print(name)  # NameError: name 'name' is not defined
