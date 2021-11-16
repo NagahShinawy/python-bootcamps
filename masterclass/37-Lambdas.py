@@ -13,7 +13,7 @@ salary = 2000
 print(dollar_to_egy(salary))
 
 
-result = (lambda value: value * DOLLAR)
+result = lambda value: value * DOLLAR
 
 
 print(result)  # <function <lambda> at 0x0000028C95C42708>
@@ -30,7 +30,7 @@ salaries = [200, 500, 1000, 2000, 300, 700]
 
 print("#" * 100)
 
-dollar = (lambda value: value * DOLLAR)
+dollar = lambda value: value * DOLLAR
 
 for salary in salaries:
     print(dollar(salary))

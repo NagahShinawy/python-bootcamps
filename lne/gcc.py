@@ -40,5 +40,5 @@ def n2w(n):
             return "unknown"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(n2w(99))

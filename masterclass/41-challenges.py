@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class Base(ABC):
-
     def __init__(self, number: int):
         self.number = number
 
@@ -12,19 +11,16 @@ class Base(ABC):
 
 
 class Fizz(Base):
-
     def apply(self):
         return self.number % 3 == 0
 
 
 class Buzz(Base):
-
     def apply(self):
         return self.number % 5 == 0
 
 
 class FizzBuzz(Fizz, Buzz):
-
     def apply(self):
         return Fizz.apply(self) & Buzz.apply(self)
 
@@ -38,6 +34,3 @@ for i in range(1, 46):
         else:
             print(f"{i} NO FIZZ, BUZZ, FIZZBUZZ")
             break
-
-
-

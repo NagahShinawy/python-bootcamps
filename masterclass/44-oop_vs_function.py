@@ -17,7 +17,7 @@ class InputMixin:
     # protected method
     def _set_value(self):
         value = input(self.PROMPT)
-        setattr(self, '_value', value)
+        setattr(self, "_value", value)
         return value
 
 

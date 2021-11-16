@@ -97,7 +97,7 @@ class Color:
 
 class Teddy:
     # class attribute
-    WHITE = 'White'
+    WHITE = "White"
     quantity = 0
 
     def __init__(self, name, color):
@@ -142,7 +142,7 @@ def main():
     print(panda.quantity, panda.color)
     print(rabbit.quantity, rabbit.color)
     print(dolphin.quantity, dolphin.color)
-    dolphin.change_color('sky')
+    dolphin.change_color("sky")
     print(dolphin.color)
     print(dolphin.to_white)
 

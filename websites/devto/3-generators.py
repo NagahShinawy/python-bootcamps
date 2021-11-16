@@ -4,6 +4,7 @@ We should definitely consider using Generator when dealing with huge datasets to
 """
 
 import cProfile
+
 numbers = (num for num in range(100))
 
 # print(numbers[0])  # TypeError: 'generator' object is not subscriptable
