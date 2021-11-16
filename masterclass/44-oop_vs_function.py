@@ -60,9 +60,17 @@ class Book(InputMixin):
     def title(self):
         return self.__title
 
+    @property
+    def price(self):
+        return self.__price
+
     def update_title(self):
         self.__title = self.set_value()
         return self.__title
+
+    def update_price(self):
+        self.__price = float(self.set_value())
+        return self.__price
 
 
 adam = User("adam", "12")
@@ -81,3 +89,7 @@ print(adam.to_json())
 cleancode.update_title()
 print(cleancode.title)
 print(cleancode.get_value())
+
+print(cleancode.price)
+cleancode.update_price()
+print(cleancode.price)
