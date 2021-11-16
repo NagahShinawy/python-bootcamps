@@ -91,4 +91,4 @@ print(salary)  # 1200
 print(name)
 del name
 
-print(name)  # NameError: name 'name' is not defined
+# print(name)  # NameError: name 'name' is not defined
