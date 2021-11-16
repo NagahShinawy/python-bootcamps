@@ -10,6 +10,21 @@ class ClsMixin(ABC):
         return self.__class__.__name__
 
 
+class InputMixin:
+
+    PROMPT = "Enter Your Value: "
+
+    def set_value(self):
+        value = input(self.PROMPT)
+        setattr(self, '_value', value)
+        return value
+
+    def get_value(self):
+        if hasattr(self, '_value'):
+            return self._value
+        return None
+
+
 class User(ClsMixin):
     def __init__(self, name, age):
         self.name = name
@@ -36,13 +51,17 @@ class User(ClsMixin):
         return {"name": self.name, "age": self.age}
 
 
-class Book:
+class Book(InputMixin):
     def __init__(self, title, price):
         self.__title = title
         self.__price = price
 
     @property
     def title(self):
+        return self.__title
+
+    def update_title(self):
+        self.__title = self.set_value()
         return self.__title
 
 
@@ -59,3 +78,6 @@ print(cleancode.title)
 print("#" * 100)
 
 print(adam.to_json())
+cleancode.update_title()
+print(cleancode.title)
+print(cleancode.get_value())
