@@ -14,15 +14,11 @@ class InputMixin:
 
     PROMPT = "Enter Your Value: "
 
-    def set_value(self):
+    # protected method
+    def _set_value(self):
         value = input(self.PROMPT)
         setattr(self, '_value', value)
         return value
-
-    def get_value(self):
-        if hasattr(self, '_value'):
-            return self._value
-        return None
 
 
 class User(ClsMixin):
@@ -65,11 +61,11 @@ class Book(InputMixin):
         return self.__price
 
     def update_title(self):
-        self.__title = self.set_value()
+        self.__title = self._set_value()
         return self.__title
 
     def update_price(self):
-        self.__price = float(self.set_value())
+        self.__price = float(self._set_value())
         return self.__price
 
 
@@ -88,7 +84,8 @@ print("#" * 100)
 print(adam.to_json())
 cleancode.update_title()
 print(cleancode.title)
-print(cleancode.get_value())
+
+print("#" * 100)
 
 print(cleancode.price)
 cleancode.update_price()
