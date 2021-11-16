@@ -57,9 +57,7 @@ author = {
         {"title": "python for all", "price": 60},
         {"title": "django for web apps", "price": 80},
     ],
-    "work_history": [
-        "IBM", "Amazon", "Google", "Microsoft"
-    ]
+    "work_history": ["IBM", "Amazon", "Google", "Microsoft"],
 }
 
 print("Name", author["name"])
@@ -68,3 +66,7 @@ print("python for all", author["books"][1])
 print("django for web apps", author["books"][2])
 
 print("Work History", author["work_history"])
+
+
+# Boolean
+# ################ ################ ################ ################ ################ ###############
