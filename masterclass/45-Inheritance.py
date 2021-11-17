@@ -1,7 +1,7 @@
 from abc import ABC
 
 
-# using protected attributes
+# using protected attributes [ protected access modifier]
 
 # Mixin for crud operations
 
@@ -83,7 +83,9 @@ class Student(Member):
 
 
 class Teacher(Member):
-    pass
+    """
+
+    """
 
 
 def main():
