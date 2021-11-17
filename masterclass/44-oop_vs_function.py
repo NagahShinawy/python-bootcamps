@@ -1,6 +1,11 @@
 from abc import ABC
 
 NOT_INT_ERROR = "{attr} should be valid int number, given '{value}'"
+NOT_NUMBER = "value '{value}' not number"
+
+
+class NotNumberException(ValueError):
+    pass
 
 
 # class mixin
@@ -19,6 +24,24 @@ class InputMixin:
         value = input(self.PROMPT)
         setattr(self, "_value", value)
         return value
+
+    @staticmethod
+    def to_int(value):
+        try:
+            value = int(value)
+        except (ValueError, TypeError):
+            raise NotNumberException(NOT_NUMBER.format(value=value))
+        else:
+            return value
+
+    @staticmethod
+    def to_float(value):
+        try:
+            value = float(value)
+        except (ValueError, TypeError):
+            raise NotNumberException(NOT_NUMBER.format(value=value))
+        else:
+            return value
 
 
 class User(ClsMixin):
@@ -48,7 +71,7 @@ class User(ClsMixin):
 
 
 class Book(InputMixin):
-    def __init__(self, title, price):
+    def __init__(self, title: str, price: float):
         self.__title = title
         self.__price = price
 
@@ -76,6 +99,7 @@ print(adam.age + 10)
 print("#" * 100)
 
 cleancode = Book("Clean Code", 10)
+django = Book("django for web apps", 23.6)
 print(cleancode.title)
 
 
@@ -90,3 +114,14 @@ print("#" * 100)
 print(cleancode.price)
 cleancode.update_price()
 print(cleancode.price)
+
+print("#" * 100)
+
+print(django.price)
+
+print(django.to_int(django.price))
+
+flask = Book("Flask for micro web apps", "46.7")
+
+print(flask.price)
+print(flask.to_float(flask.price))
