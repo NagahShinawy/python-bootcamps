@@ -7,6 +7,8 @@ from abc import ABC
 
 # *args real example ==> can create one or many courses
 
+# using composition : means has-A ==> course (has a) teacher
+
 
 class CRUDMixin:
     def __init__(self):
@@ -37,12 +39,15 @@ class CRUDMixin:
 
 
 class Course:
-    def __init__(self, title, duration):
+    def __init__(self, title, duration, teacher):
         self.title = title
         self.duration = duration
 
+        # composition
+        self.teacher = teacher
+
     def __repr__(self):
-        return f"<{self.title} - {self.duration}>"
+        return f"<{self.title} - {self.duration} - {self.teacher}>"
 
 
 class Member(ABC, CRUDMixin):
@@ -82,14 +87,29 @@ class Teacher(Member):
 
 
 def main():
-    django = Course("Django", "10H")
-    gui = Course("PyQt GUI", "5H")
-    flask = Course("Flask Micro Framework", "3H")
-    nodejs = Course("NodeJs", "7H")
-    php = Course("PHP", "4H")
+    prof = Teacher(
+        name="Prof", dob="01-01-1980", phone="+20127999999", email="prof@test.con",
+    )
+    django = Course("Django", "10H", prof)
+    gui = Course("PyQt GUI", "5H", prof)
+    flask = Course("Flask Micro Framework", "3H", prof)
+    nodejs = Course("NodeJs", "7H", prof)
+    php = Course("PHP", "4H", prof)
 
-    john = Student(class_="A", name="John", dob="01-01-1999", phone="+20127444444", email="jonh@test.con")
-    leon = Student(class_="B", name="Loen", dob="01-01-2000", phone="+20127555555", email="loen@test.con")
+    john = Student(
+        class_="A",
+        name="John",
+        dob="01-01-1999",
+        phone="+20127444444",
+        email="jonh@test.con",
+    )
+    leon = Student(
+        class_="B",
+        name="Loen",
+        dob="01-01-2000",
+        phone="+20127555555",
+        email="loen@test.con",
+    )
 
     print(john)
     john.join_course(flask)
@@ -104,5 +124,5 @@ def main():
     print(leon.courses)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
