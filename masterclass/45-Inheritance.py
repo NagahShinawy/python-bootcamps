@@ -9,6 +9,8 @@ from abc import ABC
 
 # using composition : means has-A ==> course (has a) teacher
 
+# multi level inheritance
+
 
 class CRUDMixin:
     def __init__(self):
