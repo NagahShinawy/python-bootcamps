@@ -47,6 +47,10 @@ print(clean(items))
 
 print(("red", "green") + ("blue", "white"))  # ('red', 'green', 'blue', 'white')
 
+STATUS = ("Pending", "Approved", "Canceled")
+STATUS[0] = "PENDING"  # TypeError: 'tuple' object does not support item assignment
+
+# ################ ################ ################ ################ ################ ###############
 
 # Dictionary
 
@@ -70,3 +74,7 @@ print("Work History", author["work_history"])
 
 # Boolean
 # ################ ################ ################ ################ ################ ###############
+
+is_active = True
+
+print(is_active, type(is_active))
