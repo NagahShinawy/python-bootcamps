@@ -48,7 +48,9 @@ print(clean(items))
 print(("red", "green") + ("blue", "white"))  # ('red', 'green', 'blue', 'white')
 
 STATUS = ("Pending", "Approved", "Canceled")
-STATUS[0] = "PENDING"  # TypeError: 'tuple' object does not support item assignment
+
+# Error
+# STATUS[0] = "PENDING"  # TypeError: 'tuple' object does not support item assignment
 
 # ################ ################ ################ ################ ################ ###############
 
@@ -78,3 +80,24 @@ print("Work History", author["work_history"])
 is_active = True
 
 print(is_active, type(is_active))
+
+# ################ ################ ################ ################ ################ ###############
+
+# Python Set is the unordered collection of the data type.
+# It is iterable, mutable(can modify after creation), and has unique elements.
+
+emps = {
+    "john": 1200,
+    "loen": 1500,
+    "james": 1200,
+    "adam": 1400,
+    "smith": 1400,
+    "angela": 1600,
+}
+
+
+# set comprehension
+salaries = {salary for salary in emps.values()}
+
+
+print(salaries)
