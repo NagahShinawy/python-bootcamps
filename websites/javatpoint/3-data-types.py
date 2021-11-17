@@ -101,3 +101,22 @@ salaries = {salary for salary in emps.values()}
 
 
 print(salaries)
+
+# set Error
+# print(salary[0]) TypeError: 'float' object is not subscriptable
+
+print(salaries)
+
+# set methods
+
+# 1- remove
+
+salaries.remove(1200)
+
+print(salaries)
+
+# 2- add
+
+salaries.add(1800)
+
+print(salaries)
