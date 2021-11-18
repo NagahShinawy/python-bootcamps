@@ -25,6 +25,8 @@ It returns true if one of the conditions is true. Consider the following truth t
 
 10. continue - It is used to stop the execution of the current iteration. Consider the following example.
 
+22. as - It is used to create a name alias. It provides the user-define name while importing a module.
+
 """
 
 
