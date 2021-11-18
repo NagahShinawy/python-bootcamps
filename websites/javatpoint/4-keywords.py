@@ -165,6 +165,9 @@ print(list(bonus))
 """
 28. lambda - The lambda keyword is used to create the anonymous function in Python.
 It is an inline function without a name. Consider the following example.
+
+31. None - The None keyword is used to define the null value.
+It is remembered that None does not indicate 0, false, or any empty data-types. It is an object of its data type, 
 """
 bonus = (lambda salary: salary + BONUS)  # function obj
 
