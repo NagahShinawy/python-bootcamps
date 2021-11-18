@@ -27,7 +27,12 @@ It returns true if one of the conditions is true. Consider the following truth t
 
 22. as - It is used to create a name alias. It provides the user-define name while importing a module.
 
+28. lambda - The lambda keyword is used to create the anonymous function in Python.
+It is an inline function without a name. Consider the following example.
 """
+
+
+BONUS = 500
 
 
 def skip_odd(numbers):
@@ -144,3 +149,24 @@ def outside_function():
 
 # check nonlocal keyword
 outside_function()
+
+
+def calc_bonus(salary):
+    return salary + BONUS
+
+
+salaries = [1000, 5000, 3000, 12000]
+
+bonus = map(calc_bonus, salaries)
+
+print(list(bonus))
+
+
+"""
+28. lambda - The lambda keyword is used to create the anonymous function in Python.
+It is an inline function without a name. Consider the following example.
+"""
+bonus = (lambda salary: salary + BONUS)  # function obj
+
+for sal in salaries:
+    print(bonus(sal))
