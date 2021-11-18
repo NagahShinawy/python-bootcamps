@@ -113,6 +113,9 @@ names = []
 emails = []
 
 print(names is emails)  # False
+
+print(id(row) == id(col))  # True
+
 # Note: A mutable data-types DO NOT refer to the same object.
 # immutable objs refers to the same object
 
