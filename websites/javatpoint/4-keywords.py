@@ -99,3 +99,25 @@ CODIV_DEC = (2021, 12)
 
 print(calendar.prevmonth(*CODIV_DEC))
 print(calendar.nextmonth(*CODIV_DEC))
+
+# ################ ################ ################ ################ ################ ###############
+
+# check objs identity
+
+row = 4
+col = 4
+
+print(row is col)  # True
+
+names = []
+emails = []
+
+print(names is emails)  # False
+# Note: A mutable data-types DO NOT refer to the same object.
+# immutable objs refers to the same object
+
+# https://towardsdatascience.com/https-towardsdatascience-com-python-basics-mutable-vs-immutable-objects-829a0cb1530a
+"""
+Some of the mutable data types in Python are list, dictionary, set and user-defined classes.
+On the other hand, some of the immutable data types are int, float, decimal, bool, string, tuple, and range.
+"""
