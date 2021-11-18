@@ -1,3 +1,5 @@
+import calendar
+
 """
 Python Keywords are special reserved words that convey a special meaning to the compiler/interpreter. Each keyword has a special meaning and a specific operation.
 These keywords can't be used as a variable. Following is the List of Python Keywords.
@@ -48,3 +50,43 @@ NAMES = ["John", "Loen", "James", "Adam", "Angela", "Smith"]
 ADAM = "Adam"
 
 find_member(ADAM, NAMES)
+
+
+# list of months
+months = calendar.month_name
+
+for month in months:
+    print(month)
+
+
+# check year if leap
+for year in range(2000, 2022):
+    if calendar.isleap(year):
+        print(year)
+
+
+print("#" * 100)
+
+# get day name based on year, month, day
+# input 2021, 11, 18 ==> 0, 1, ... 6 as days , you can convert it to Mon, Tue, ...
+
+DAYS = {0: "Mon", 1: "Tue", 2: "Wen", 3: "Thur", 4: "Fri", 5: "Sat", 6: "Sun"}
+
+day = DAYS[calendar.weekday(2021, 11, 18)]
+print(calendar.weekday(2021, 11, 18))
+
+print(day)
+
+
+# ################ ################ ################ ################ ################ ###############
+
+# get number of days in a month
+# input year, month ==> number of days in month and first day of that month
+day, days = calendar.monthrange(2021, 11)
+print(DAYS[day], days)
+
+
+# ################ ################ ################ ################ ################ ###############
+
+# like monthrange but just return number of days in a month
+print(calendar.monthlen(2021, 11))
