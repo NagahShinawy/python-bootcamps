@@ -90,3 +90,10 @@ print(DAYS[day], days)
 
 # like monthrange but just return number of days in a month
 print(calendar.monthlen(2021, 11))
+
+# ################ ################ ################ ################ ################ ###############
+# get the next/prev month
+CODIV_DEC = (2021, 12)
+
+print(calendar.prevmonth(*CODIV_DEC))
+print(calendar.nextmonth(*CODIV_DEC))
