@@ -125,3 +125,22 @@ print(id(row) == id(col))  # True
 Some of the mutable data types in Python are list, dictionary, set and user-defined classes.
 On the other hand, some of the immutable data types are int, float, decimal, bool, string, tuple, and range.
 """
+
+# nonlocal
+
+
+# works like global, you can change vars inside nested funcs
+def outside_function():
+    a = 20
+
+    def inside_function():
+        nonlocal a
+        a = 30
+        print("Inner function: ", a)
+
+    inside_function()
+    print("Outer function: ", a)
+
+
+# check nonlocal keyword
+outside_function()
