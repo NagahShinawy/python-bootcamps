@@ -1,1 +1,20 @@
 # http://python.slides.com/colt/web-scraping#/2/0/2
+
+# root directory[base]: is top level directory
+
+# os file structure is tree like structure, branches
+
+# absolute path: full path based on root /
+
+# relative path: is a path related to current location
+
+# ########### ########### ########### ########### ########### ########### ########### ##########
+1- pwd : print current directory ==> where am I ?
+
+- show full absolute path of where you are at
+
+2- ~ : home directory [user directory] ===> bash: /c/Users/Nagaj: Is a directory
+
+- default directory when you open terminal like cmd when you open it , default is c/users/USERNAME
+
+3- / root directory
