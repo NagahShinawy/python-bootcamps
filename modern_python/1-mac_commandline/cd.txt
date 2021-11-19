@@ -1,0 +1,34 @@
+# http://python.slides.com/colt/web-scraping#/2/0/2
+
+# 1- Navigating Absolutely
+
+# EXAMPLE :  cd C:\Users\Nagaj\Desktop\cats
+
+# cd / ==> means change directory to root
+
+# ########## ########## ########## ########## ########## ########## ########## ########## #########
+
+# 2- Navigating Relatively
+
+The dot "." stands for current directory, and dot-dot ".." stands for parent directory.
+This allows for relative navigation:
+
+cd . ==> navigate to current dir
+
+cd .. ==> navigate to parent dir
+
+# ########## ########## ########## ########## ########## ########## ########## ########## #########
+
+# http://python.slides.com/colt/web-scraping#/13/0/0
+
+# ls YOUR_DIR -a -l
+
+# options "flags"
+# -a : list of files inlcuding hidden
+# -l : long format
+
+# you can compile them once
+
+ls -al
+
+# ########## ########## ########## ########## ########## ########## ########## ########## #########
