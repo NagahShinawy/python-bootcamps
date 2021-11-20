@@ -80,3 +80,15 @@ next_year = today + timedelta(days=DAYS_IN_YEAR)
 
 print(today)  # 2021-11-20 12:52:40.003728
 print(next_year)  # 2022-11-20 12:52:40.003728
+
+# ################################################ ##################################################
+print("#" * 50)
+
+WEEK = 7  # days
+
+HOURS_THREE_DAYS = 3 * 24
+
+print(today)  # 2021-11-20 13:03:23.199853
+print(
+    today + timedelta(days=WEEK, hours=HOURS_THREE_DAYS)
+)  # 2021-11-30 13:03:23.199853
