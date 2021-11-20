@@ -31,6 +31,6 @@ for i in range(1, 46):
     for action in ACTIONS:
         if action(i).apply():
             print(f"{i} is {action.__name__}")
-        else:
-            print(f"{i} NO FIZZ, BUZZ, FIZZBUZZ")
-            break
+        # else:
+        #     print(f"{i} NO FIZZ, BUZZ, FIZZBUZZ")
+        #     break
