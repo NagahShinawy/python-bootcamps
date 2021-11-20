@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 # get diff between 2 dates objs
 # convert from date obj to str using strftime ==> datetimeObj.strftime(YOUR CUSTOM FORMAT)
 # get next month from today
+# add 2 dates objs [python use magic methods to implement that]
 
 SLEEP_TIME = 5
 
@@ -69,3 +70,13 @@ next_month = today + timedelta(days=MONTH_DAYS)
 
 print(today)
 print(next_month)
+
+
+# ################################################ ##################################################
+
+print("#" * 50)
+DAYS_IN_YEAR = 365
+next_year = today + timedelta(days=DAYS_IN_YEAR)
+
+print(today)  # 2021-11-20 12:52:40.003728
+print(next_year)  # 2022-11-20 12:52:40.003728
