@@ -11,9 +11,9 @@
 # Lists  # DONE
 # Tuples  # DONE
 # sets  # DONE
-# Dictionary
-# if else
-# while
+# Dictionary # DONE
+# if else # DONE
+# while  # DONE
 # for
 # function
 # lambda
@@ -50,3 +50,7 @@ print(car)
 
 car.clear()
 print(car)
+
+
+# short hand expression
+print("Yes") if 5 > 2 else print("No")
