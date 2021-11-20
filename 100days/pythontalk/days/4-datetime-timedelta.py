@@ -89,6 +89,8 @@ WEEK = 7  # days
 HOURS_THREE_DAYS = 3 * 24
 
 print(today)  # 2021-11-20 13:03:23.199853
+
+# after 10 days
 print(
     today + timedelta(days=WEEK, hours=HOURS_THREE_DAYS)
 )  # 2021-11-30 13:03:23.199853
