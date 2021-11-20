@@ -18,3 +18,15 @@ print(today.date())  # 2021-11-20
 
 # 2- using date
 print(date.today())  # 2021-11-20
+
+today = date.today()
+
+month = today.month
+print(month)  # 11
+
+day = today.day
+print(day)
+
+year = today.year
+
+print(year)
