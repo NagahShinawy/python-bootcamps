@@ -14,12 +14,12 @@
 # Dictionary # DONE
 # if else # DONE
 # while  # DONE
-# for
-# function
-# lambda
-# classes
-# Inheritance
-# modules
+# for # DONE
+# function # DONE
+# lambda # DONE
+# classes # DONE
+# Inheritance # DONE
+# modules # DONE
 
 
 fruits = {"apple", "banana", "cherry"}
