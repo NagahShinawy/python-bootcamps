@@ -13,9 +13,9 @@ DAY = "Day"
 DURATION = "Day {start}-{end}"
 DAYS = range(1, 101, 3)
 
-LAST_END = 97  # 100 - 3
+END = 97  # 100 - 3
 
-groups = [(day, day + 3) if day == LAST_END else (day, day + 2) for day in DAYS[:-1]]
+groups = [(day, day + 3) if day == END else (day, day + 2) for day in DAYS[:-1]]
 
 print(groups)
 
