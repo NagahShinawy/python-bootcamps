@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 
 # create timedelta obj
 # convert from seconds to hours
@@ -94,3 +94,20 @@ print(today)  # 2021-11-20 13:03:23.199853
 print(
     today + timedelta(days=WEEK, hours=HOURS_THREE_DAYS)
 )  # 2021-11-30 13:03:23.199853
+
+
+# validate till 25 days
+
+VALIDATE_DAYS = 25
+
+today = date(year=2021, month=10, day=4)
+wrong_date = date(year=2021, month=12, day=3)
+next_25_days = today + timedelta(days=VALIDATE_DAYS)
+
+print(next_25_days)  # 2021-10-29
+
+days = wrong_date - today
+
+print(days)
+
+print(today + timedelta(days=21) + timedelta(days=21) + timedelta(days=18))
