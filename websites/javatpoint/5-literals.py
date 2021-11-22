@@ -53,6 +53,50 @@ books = ["clean code", "clean arch", "Js", "React"]
 
 print(books)
 
+# # #################### #################### #################### #################### ###################
+
+# Dictionary
+
+# nested dictionary
+
+medical_report = {
+    "created": "2012-01-01",
+    "medical_center": "Alfa",
+    "hear": "good",
+    "eye": "good",
+}
 
 
+print(medical_report)
 
+medical_report = {
+    "fname": "James",
+    "lname": "Loen",
+    "address": "Cairo",
+    "gender": "male",
+    "national_id": "01234567891234",
+    "passport": "X0123456789",
+    "created": "2012-01-01",
+    "medical_center": {
+        "name": "Alfa",
+        "location": {"lat": 3434.34, "log": 345.90},
+        "address": "Giza-Egypt",
+    },
+    "hear": "good",
+    "eye": "good",
+    "status": "fit",
+}
+
+# # #################### #################### #################### #################### ###################
+
+
+# tuple : ready only data structure
+# Python tuple is collection of different data-type. It is immutable which means it cannot be modified after creation.
+
+GENDER = ("Male", "Female")
+DAYS = ("Mon", "Tue", "Wen", "Thr", "Fri", "Sat", "Sun")
+
+BLOOD_TYPES = ("A+", "A-", ...)  # Ellipsis
+print(BLOOD_TYPES)
+
+LOCATION = (34.90, 90.32)
