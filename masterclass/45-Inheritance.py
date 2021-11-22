@@ -67,14 +67,17 @@ class Member(ABC, CRUDMixin):
     def __str__(self):
         return f"{self.__class__.__name__}<{self.name} - {self.phone}>"
 
-    def join_course(self, course: Course):
+    def join_course(self, course: Course,):
         self._create(course)
 
-    def join_courses(self, *args: Course):
+    def join_courses(self, *args: Course, **kwargs):
         self._create_all(*args)
 
     def remove_course(self, course: Course):
         self._delete(course)
+
+    def create_user(self, username, password, **kwargs):
+        print()
 
 
 class Student(Member):
