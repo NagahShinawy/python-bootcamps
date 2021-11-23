@@ -7,6 +7,10 @@
 # update method dictionary
 # constants
 # format method
+# using os to create folders
+# mkdir
+
+import os
 
 
 DAY = "Day"
@@ -38,3 +42,13 @@ for group in groups:
 
 
 print(map_days)
+
+
+def create_day(day):
+    os.mkdir(day)
+
+
+for group in groups:
+    start, end = group
+    duration = f"days-{start}-{end}"
+    create_day(duration)
