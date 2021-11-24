@@ -4,6 +4,9 @@ from collections import namedtuple
 # A `namedtuple` is a convenient (مريح) way to define a class without methods.
 # This allows you to store `dict` like objects you can access by attributes. Let's first look at a classic `tuple`:
 
+# Conclusion: use a `namedtuple` wherever you can! They are easy to implement and make your code more readable.
+
+
 users = [
     ("bob", "1991-01-01", "bob@test.com"),
     ("james", "1994-01-01", "james@test.com"),
