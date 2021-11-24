@@ -102,3 +102,18 @@ print(BLOOD_TYPES)
 LOCATION = (34.90, 90.32)
 
 # # #################### #################### #################### #################### ###################
+
+print("#" * 100)
+
+"""
+Set:
+
+Python set is the collection of the unordered dataset with no duplicates.
+It is enclosed by the {} and each element is separated by the comma(,).
+"""
+
+salaries = {500, 600, 300, 1200, 400, 600, 100, 500}
+
+print(salaries)
+print(len(salaries))
+print(sorted(salaries), type(sorted(salaries)))  # list
