@@ -1,5 +1,7 @@
 # Python If-else statements Decision making
 # constants
+# if else
+# if elif
 
 """
 if expression:
@@ -11,6 +13,9 @@ number = int(input("Number: "))
 
 EVEN = "Even Number"
 ODD = "Odd Number"
+ELIGIBLE = "You are eligible to vote !!"
+NOT_ELIGIBLE = "Sorry! you have to wait !!"
+
 
 JAN = 1
 
@@ -77,3 +82,13 @@ elif c > b and c > a:
 
 elif a == b == c:
     print("All the same")
+
+# ############## ############## ############## ############## ############## #############
+
+age = 30
+UNDERAGE = 18
+
+if age >= UNDERAGE:
+    print(ELIGIBLE)
+else:
+    print(NOT_ELIGIBLE)
