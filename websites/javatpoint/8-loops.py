@@ -24,6 +24,11 @@ BONUS = 0.3
 DEPENDENCY_RELATION = ("son", "daughter", "father", "mother", "husband", "wife")
 
 GENDER = ("male", "female")
+ADULTHOOD_AGE = 18
+PRIMARY_SCHOOL_AGES = [7, 10]  # surveys needed only for these ages
+SECONDARY_SCHOOL_AGES = [13, 16]  # surveys needed only for these ages
+SCHOOL_AGES = range(6, 18)  # list all school ages, used for testing
+
 
 ALLOWED_BLOOD_TYPES = ("A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-")
 
