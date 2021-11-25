@@ -1,6 +1,11 @@
 # Python If-else statements Decision making
 # constants
 
+"""
+if expression:
+    statement
+"""
+
 
 number = int(input("Number: "))
 
@@ -53,3 +58,22 @@ if is_even(number):
 
 else:
     print(ODD)
+
+
+# find largest number of three numbers
+
+a = 10
+b = 10
+c = 10
+
+if a > b and a > c:
+    print("A")
+
+elif b > a and b > c:
+    print("B")
+
+elif c > b and c > a:
+    print("C")
+
+elif a == b == c:
+    print("All the same")
