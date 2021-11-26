@@ -28,7 +28,42 @@ print()
 # stop when find letter 'p'
 
 for letter in website:
-    if letter == 'p':
+    if letter == "p":
         break
 
     print(letter, end="")
+
+
+# pass statement: do nothing, skip implementation
+
+
+def welcome():
+    pass
+
+
+print()
+# Example-1: Program to print 1 to 10 using while loop
+
+start = 1
+END = 10
+
+while start <= END:
+    print(start)
+    start += 1
+
+
+# ############ ############ ############ ############ ############ ############ ###########
+
+# Example -2: Program to print table of given numbers.
+
+user_number = 5
+
+start = 1
+END = 10
+MULTI = "*"
+
+
+while start <= END:
+    result = start * user_number
+    print(f"{start} {MULTI} {user_number} = {result}")
+    start += 1
