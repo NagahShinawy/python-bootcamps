@@ -84,6 +84,5 @@ while counter <= END:
     counter += 1
     if counter > END:
         print()
-
 else:
     print("Done")
