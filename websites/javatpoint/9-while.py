@@ -9,6 +9,7 @@ while expression:
 # It is also known as a pre-tested loop
 
 # The expression should be any valid Python expression resulting in true or false
+# else with while
 
 
 # # prints all letters except 'a' and 't'
@@ -67,3 +68,22 @@ while start <= END:
     result = start * user_number
     print(f"{start} {MULTI} {user_number} = {result}")
     start += 1
+
+
+"""
+Python allows us to use the else statement with the while loop also.
+The else block is executed when the condition given in the while statement becomes false. Like for loop,
+if the while loop is broken using break statement, then the else block will not be executed,
+and the statement present after else block will be executed. The else statement is optional to use with the while loop.
+Consider the following example.
+"""
+counter = 1
+
+while counter <= END:
+    print(counter, end="")
+    counter += 1
+    if counter > END:
+        print()
+
+else:
+    print("Done")
