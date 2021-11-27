@@ -11,10 +11,30 @@ import inflect
 # from number to word using inflect
 # using type() function
 # floor division
+# float / float = float
+# float / int = float
+# int / float = float
+# int / int = float
+
+# #####
+
+# int + float = float
+# float + float = float
+# int + int = int
+
+# ########### ########### ########### ########### ########### ########### ########### ##########
+print(12 + 1.0)  # 13.0 float
+print(12.0 + 1.0)  # 13.0 float
+print(12 + 1)  # 13 int
 
 revenue = 130
 YEARLY_BONUS = 150
 
+print(10.5 / 2.6)  # 4.038461538461538   ===> float / float  ==> float
+print(10.5 / 2)  # 5.25   ===> float / int ==> float
+print(10 / 2.0)  # 5.0   ===> int / float == float
+
+print(10 / 2)  # 5.0 ==> int / int = float
 print(revenue)
 
 salary = 12.878
