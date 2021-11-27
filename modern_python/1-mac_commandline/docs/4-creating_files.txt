@@ -13,3 +13,13 @@ touch styles.css home.css footer.css
 2-  run 2 commands in one line cmd linux
 
 # cd ../styles/ ; touch details.txt
+
+
+# cd styles/images/ ; touch logo.png   ====> empty png image
+
+# if the file already exist, DON'S override but update the created datetime
+
+# ############ ############ ############ ############ ############ ############ ############ ###########
+3- open image with cli
+
+>> open IMAGE_PATH
