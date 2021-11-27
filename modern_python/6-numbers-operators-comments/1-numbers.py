@@ -8,6 +8,8 @@ import inflect
 # N decimal places
 # using property decorator
 # using private access modifier
+# using class method (classmethod)
+# encapsulation: hide attributes, just dealing with it using methods
 # from number to word using inflect
 # using type() function
 # floor division
@@ -66,9 +68,17 @@ total_revenue = 3142671.763453
 print(f"${total_revenue:,.2f}")  # $3,142,671.76
 
 
+class Currency:
+    DOLLAR = "$"
+    EUR = "€"
+    SAR = "SAR"
+    EGY = "EGY"
+
+
 class Revenue:
 
-    __CURRENCY = "$"
+    __CURRENCY = Currency.DOLLAR
+
     __DECIMAL_PLACES = 2
 
     def __init__(self, value):
@@ -90,6 +100,11 @@ class Revenue:
     def to_words(self):
         return inflect.engine().number_to_words(self.value)
 
+    @classmethod
+    def change_currency(cls, currency):
+        cls.__CURRENCY = currency
+        return cls.__CURRENCY
+
 
 def main():
     print(type(34))  # <class 'int'>
@@ -102,6 +117,9 @@ def main():
     print(
         q1_revenue.to_words
     )  # one million, two hundred thousand, one hundred and fifty point three four five
+
+    print(q1_revenue.change_currency(Currency.SAR))
+    print(q1_revenue.to_currency)
 
 
 if __name__ == "__main__":
