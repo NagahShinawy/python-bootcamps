@@ -215,3 +215,45 @@ for number in numbers:
 print(
     doubles
 )  # defaultdict(<class 'int'>, {1: 2, 2: 4, 3: 6, 4: 8, 5: 10, 6: 12, 7: 14, 8: 16, 9: 18, 10: 20})
+
+
+# ############ ############ ############ ############ ############ ############ ############ ###########
+
+students = {
+    "first_name": [],
+    "last_name": [],
+    "date_of_birth": [],
+    "address": [],
+    "phone": [],
+    "email": [],
+}
+
+print(students)
+
+print(students.get("class_room") is None)  # True
+
+students = defaultdict(list)
+
+COLS = ("first name", "last name", "date of birth", "address", "phone", "email")
+
+
+challenges = [
+    ("john", 10),
+    ("james", 5),
+    ("loen", 7),
+    ("adam", 8),
+    ("angela", 4),
+    ("angela", 3),
+    ("john", 20),
+    ("loen", 15),
+    ("adam", 13),
+    ("loen", 1),
+    ("james", 30),
+]
+
+scores = defaultdict(list)
+
+for name, score in challenges:
+    scores[name].append(score)
+
+print(scores)
