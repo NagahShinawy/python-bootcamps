@@ -1,0 +1,15 @@
+# http://python.slides.com/colt/web-scraping#/16
+
+# 1- using 'touch'
+
+# create many files as once
+
+touch styles.css home.css footer.css
+
+# ############ ############ ############ ############ ############ ############ ############ ###########
+
+# https://www.howtogeek.com/269509/how-to-run-two-or-more-terminal-commands-at-once-in-linux/
+
+2-  run 2 commands in one line cmd linux
+
+# cd ../styles/ ; touch details.txt
