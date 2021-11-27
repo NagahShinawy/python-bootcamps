@@ -9,8 +9,11 @@ import inflect
 # using property decorator
 # using private access modifier
 # from number to word using inflect
+# using type() function
+# floor division
 
 revenue = 130
+YEARLY_BONUS = 150
 
 print(revenue)
 
@@ -18,6 +21,12 @@ salary = 12.878
 
 print(salary)
 
+by_quarter = YEARLY_BONUS / 4  # float
+print("By Quarter", by_quarter)  # float
+
+by_quarter = YEARLY_BONUS // 4
+
+print("By Quarter", by_quarter)  # floor division
 
 # string formatting: round float number with f
 # How to format float to N decimal places
@@ -58,17 +67,20 @@ class Revenue:
         return f"{self.value:.{self.__DECIMAL_PLACES}f}"
 
     @property
-    def to_word(self):
+    def to_words(self):
         return inflect.engine().number_to_words(self.value)
 
 
 def main():
+    print(type(34))  # <class 'int'>
+    print(type(23.65))  # <class 'float'>
+
     q1_revenue = Revenue(1_200_150.345)
     print(q1_revenue.to_int)
     print(q1_revenue.to_currency)
     print(q1_revenue.to_pretty)
     print(
-        q1_revenue.to_word
+        q1_revenue.to_words
     )  # one million, two hundred thousand, one hundred and fifty point three four five
 
 
