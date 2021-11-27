@@ -1,0 +1,8 @@
+# http://python.slides.com/colt/web-scraping#/15
+
+# 1- create many folders as once
+
+1- mkdir images css fonts
+
+
+# ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### #####
