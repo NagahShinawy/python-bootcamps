@@ -17,6 +17,9 @@
 # in membership operator
 # raw string using r
 # escape chars
+# escaping  (https://www.javatpoint.com/python-strings)
+# format method  (using Curly braces, Positional Argument, Keyword argument, dictionary unpacking)
+# string methods  https://www.javatpoint.com/python-strings
 
 
 hi = "Hi"
@@ -113,6 +116,58 @@ print(r"this is \ ")  # this is \
 
 # escape chars
 context = 'They said, "Hello what\'s going on?"'
-
-
 print(context)
+
+
+# escape chars using triple quotes
+print('''''They said, "What's there?"''')
+
+
+# escaping single quotes
+print('They said, "What\'s going on?"')
+
+
+# escaping double quotes
+print('They said, "What\'s going on?"')
+
+
+# https://www.javatpoint.com/python-strings
+
+# The list of an escape sequence is given below:
+
+# ############# ############# ############# ############# ############# ############# ############
+
+# The format() method
+print("#" * 50)
+
+username = "john"
+dob = "1990-01-01"
+
+# Using Curly braces
+print("Username: {}\nDate of birth".format(username, dob))
+
+# Using Positional Argument
+MESSI = "Messi"
+RONALDO = "Ronaldo"
+
+print("{1} and {0} are best players ".format(RONALDO, MESSI))
+
+
+# ############# ############# ############# ############# ############# ############# ############
+
+# using keyword argument
+user = {
+    "username": "John",
+    "dob": "1990-01-01",
+    "id": "123456789",
+}
+
+
+print(
+    "Username: {username}\nDate of birth: {dob}\nid:{id}".format(
+        username=user["username"], dob=user["dob"], id=user["id"]
+    )
+)
+
+# using dictionary unpacking
+print("Username: {username}\nDate of birth: {dob}\nid:{id}".format(**user))
