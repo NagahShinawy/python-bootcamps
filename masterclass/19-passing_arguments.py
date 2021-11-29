@@ -50,7 +50,7 @@ class Divide(Operation):
         return self.num1 / self.num2
 
 
-class IntDiv(Operation):
+class FloorDiv(Operation):
     OPERATOR = "//"
 
     def apply(self):
@@ -120,7 +120,7 @@ def to_txt(text: str):
 
 def main():
     num1, num2 = get_random_numbers()
-    operations = [Add, Sub, Multiply, Divide, IntDiv, Reminder, Power]
+    operations = [Add, Sub, Multiply, Divide, FloorDiv, Reminder, Power]
     result = ""
 
     for operation in operations:
