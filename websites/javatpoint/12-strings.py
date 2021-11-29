@@ -107,3 +107,12 @@ print("this is \ ")  # this is \
 # print(r"this is \")  # SyntaxError: EOL while scanning string literal
 
 print(r"this is \ ")  # this is \
+
+# ################
+
+
+# escape chars
+context = 'They said, "Hello what\'s going on?"'
+
+
+print(context)
