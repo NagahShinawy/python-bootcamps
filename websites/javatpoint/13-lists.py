@@ -43,3 +43,22 @@ a = [1, 2, "Peter", 4.50, "Ricky", 5, 6]
 b = [1, 2, 5, "Peter", 4.50, "Ricky", 6]
 
 print(a == b)
+
+s = "minusplusminus"
+x = "plusminusminusplus"
+
+
+def solution(S: str) -> str:
+    # write your code in Python 3.6
+    return S.replace("plus", "+").replace("minus", "-")
+
+
+print(solution(s))
+print(solution(x))
+
+def solution(A, D):
+    # write your code in Python 3.6
+    r
+
+
+
